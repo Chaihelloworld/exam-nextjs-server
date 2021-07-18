@@ -61,9 +61,9 @@ server.use((req, res, next) => {
 
 
 /////new CMV/////
-const port = server.get('port') || 5000;
+const port = process.env.PORT || 5000;
 
-server.listen(5000, function () {
+server.listen(port, function () {
   console.log(`Server is running on port: ${port}`);
   // console.log('Server Listen at http://localhost:5000');
   console.log('Users :', users)
